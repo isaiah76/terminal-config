@@ -21,6 +21,11 @@ setopt HIST_IGNORE_SPACE      # Ignore commands starting with a space
 setopt HIST_VERIFY            # Show command before execution with history expansion
 setopt EXTENDED_HISTORY       # Save timestamped history
 
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[command]='fg=white'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=white'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=white'
+
 # Source plugins (verify that these paths match your installation)
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
