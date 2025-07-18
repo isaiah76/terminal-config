@@ -1,10 +1,14 @@
 # ~/.zshrc
 
-# Initialize starship prompt
-eval "$(starship init zsh)"
-
 # Initialize completions
 autoload -U compinit && compinit
+autoload -Uz add-zsh-hook
+
+# Source plugins (verify that these paths match your installation)
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Initialize starship prompt
+eval "$(starship init zsh)"
 
 # History settings
 export HISTFILE=~/.zsh_history
@@ -26,10 +30,6 @@ ZSH_HIGHLIGHT_STYLES[command]='fg=white'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=white'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=white'
 
-# Source plugins (verify that these paths match your installation)
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Set nvim alias based on environment:
 # - If in a direct Kitty window (KITTY_WINDOW_ID is set) and not inside tmux, use kitty.sh.
 # - Otherwise, call nvim directly.
@@ -46,3 +46,11 @@ bindkey "^[[B" history-beginning-search-forward
 # Append custom scripts to PATH
 export PATH="$PATH:/home/isaiah/Projects/Scripts"
 
+mcd() {
+  mkdir -p "$1" && cd "$1"
+}
+
+# Show system info at terminal start
+if [[ $- == *i* ]] && command -v neofetch &> /dev/null; then
+    neofetch
+fi
