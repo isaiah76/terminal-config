@@ -54,3 +54,12 @@ mcd() {
 if [[ $- == *i* ]] && command -v neofetch &> /dev/null; then
     neofetch
 fi
+
+export PATH=$PATH:/home/isaiah/.spicetify
+
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools/35.0.1
+export ANDROID_AVD_HOME=$HOME/.config/.android/avd
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator

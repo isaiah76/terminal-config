@@ -3,7 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 local nvlsp = require "nvchad.configs.lspconfig"
 
--- List of language servers to set up (excluding jdtls, which is handled separately)
+-- List of language servers to set up 
 local servers = {
   "html",
   "cssls",
@@ -26,7 +26,6 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- Custom configuration for Java LSP (jdtls)
 lspconfig.jdtls.setup {
   cmd = {
     "/home/isaiah/.local/share/nvim/mason/bin/jdtls",
@@ -34,11 +33,17 @@ lspconfig.jdtls.setup {
   },
   on_attach = function(client, bufnr)
     nvlsp.on_attach(client, bufnr)
-    -- Optional: Enable Java-specific formatting
+    -- Enable Java-specific formatting
     client.server_capabilities["documentFormattingProvider"] = true
   end,
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
+
+  root_dir = function(fname)
+    return lspconfig.util.root_pattern("pom.xml", "build.gradle", ".git", ".project")(fname)
+      or lspconfig.util.path.dirname(fname)
+  end,
+
   settings = {
     java = {
       format = {
@@ -58,7 +63,7 @@ lspconfig.pyright.setup {
   settings = {
     python = {
       analysis = {
-        autoFormat = true, 
+        autoFormat = true,
       },
     },
   },
