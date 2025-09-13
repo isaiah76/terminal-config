@@ -7,9 +7,6 @@ autoload -Uz add-zsh-hook
 # Source plugins (verify that these paths match your installation)
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Initialize starship prompt
-eval "$(starship init zsh)"
-
 # History settings
 export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
@@ -30,7 +27,6 @@ ZSH_HIGHLIGHT_STYLES[command]='fg=white'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=white'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=white'
 
-# Set nvim alias based on environment:
 # - If in a direct Kitty window (KITTY_WINDOW_ID is set) and not inside tmux, use kitty.sh.
 # - Otherwise, call nvim directly.
 if [[ -n "$KITTY_WINDOW_ID" && -z "$TMUX" ]]; then
