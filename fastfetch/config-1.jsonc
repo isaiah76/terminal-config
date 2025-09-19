@@ -1,0 +1,45 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "/home/isaiah/.config/logo.png",
+    "height": 10,
+    "padding": {
+      "left": 3
+    }
+  },
+  "display": {
+    "separator": " - "
+  },
+  "modules": [
+    {
+      "type": "title",
+      "keyColor": "black"
+    },
+    {
+      "type": "custom",
+      "format": "- - - - - - - - -"
+    }, 
+    {
+      "type": "os",
+      "key": "OS  "
+    },
+    {
+      "type": "kernel",
+      "key": "Kernel  "
+    },
+    {
+      "type": "packages",
+      "key": "Packages"
+    }, 
+    {
+      "type": "shell",
+      "key": "Shell  "
+    },
+    {
+      "type": "wm",
+      "key": "WM  "
+    },
+    "break",
+    "colors"
+  ]
+}

@@ -1,5 +1,12 @@
 # ~/.zshrc
 
+#  This is your file 
+# Add your configurations here
+# export EDITOR=nvim
+export EDITOR=code
+
+# unset -f command_not_found_handler # Uncomment to prevent searching for commands not found in package manageru
+
 # Initialize completions
 autoload -U compinit && compinit
 autoload -Uz add-zsh-hook
@@ -47,8 +54,8 @@ mcd() {
 }
 
 # Show system info at terminal start
-if [[ $- == *i* ]] && command -v neofetch &> /dev/null; then
-    neofetch
+if [[ $- == *i* ]] && command -v fastfetch &> /dev/null; then
+    fastfetch --config ~/.config/fastfetch/config.jsonc
 fi
 
 export PATH=$PATH:/home/isaiah/.spicetify
@@ -59,3 +66,4 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/build-tools/35.0.1
 export ANDROID_AVD_HOME=$HOME/.config/.android/avd
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+
