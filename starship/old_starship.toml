@@ -1,0 +1,65 @@
+# ~/.config/starship.toml
+
+add_newline = true
+command_timeout = 2000
+
+format = """$os$hostname$directory$git_branch$python
+$character
+"""
+
+[character]
+success_symbol = "[❯](bold white)"
+error_symbol   = "[❯](bold red)"
+
+[os]
+format = "[$symbol](bold white) "
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Arch = '󰣇'
+Ubuntu = ''
+Macos = '󰀵'
+Unknown = '󰠥'
+
+[username]
+format = "[$user](#00ffff) "
+show_always = true
+
+[hostname]
+format = "[$hostname](magenta) "
+disabled = false
+
+[directory]
+truncation_length = 0
+home_symbol = '~'
+format = "[$path](white) "
+
+[git_branch]
+symbol = ' '
+format = "[$symbol$branch](green) "
+
+[git_status]
+disabled = true
+
+[kubernetes]
+disabled = true
+
+[python]
+symbol = '󰌠'
+python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
+format = "[$symbol ${version}](cyan) "
+
+[vagrant]
+disabled = true
+[docker_context]
+disabled = true
+[helm]
+disabled = true
+[nodejs]
+disabled = true
+[ruby]
+disabled = true
+[terraform]
+disabled = true
+

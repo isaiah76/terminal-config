@@ -1,121 +1,74 @@
-#Location: ~/.config/starship.toml
-
-add_newline = true
-command_timeout = 2000
-
-format = """$env_var$os$username$hostname$kubernetes$directory$git_branch$git_status$python
-$character
-"""
+palette = "grey"
+format = """$username$hostname$directory$fill[$all](grey)$time$line_break$character"""
 
 [character]
-success_symbol = "╰⎯"
-error_symbol = "╰⎯"
-# ╭╴ ╰─
+success_symbol = "[@](bold green)"
+error_symbol = "[@](bold red)"
 
-[env_var]
-symbol = "╭╴"
-variable = 'SHELL'
-format = "$symbol"
+[fill]
+symbol = '─'
+style = '#222222'
+
+[cmd_duration]
+min_time = 10000
+
+[time]
 disabled = false
-
-
-#warp-Drop ugly default prompt characters
-#success_symbol = ""
-#error_symbol = ""
-
-# ---
-
-[os]
-format = '[$symbol](bold white) '   
-disabled = false
-
-[os.symbols]
-Windows = ' '
-Arch = '󰣇'
-Ubuntu = ''
-Macos = '󰀵'
-Unknown = '󰠥'
-
-# ---y
-
-# Shows the username
-[username]
-style_user = 'yellow bold'
-style_root = '#555555'
-format = '[//](#555555) [$user](#00ffff) ' # 2883ff
-disabled = false
-show_always = true
-
-# Shows the hostname
-[hostname]
-ssh_only = false
-format = '[//](#555555) [$hostname](#00ffff) '
-disabled = false
-
-# Shows current directory
-[directory]
-truncation_length = 0
-truncation_symbol = '…/'
-home_symbol = '~'
-# read_only_style = '197'
-read_only = '  '
-format = '[//](#555555) [$path]($style)[$read_only]($read_only_style) '
-style = '#66ffff' # yellow bold
-
-
-# Shows current git branch
-[git_branch]
-# symbol = ' '
-symbol = ' '
-format = '[//](#555555) [$symbol\[$branch\]]($style) '
-# truncation_length = 0
-# truncation_symbol = '…/'
-style = 'bold green'
-
-# Shows current git status
-[git_status]
-disabled = true
-format = '[ $all_status $ahead_behind]($style) '
-style = 'bold green'
-conflicted = '🏳'
-up_to_date = ''
-untracked = ' '
-ahead = '⇡${count}'
-diverged = '⇕⇡${ahead_count}⇣${behind_count}'
-behind = '⇣${count}'
-stashed = ' '
-modified = ' '
-staged = '[++\($count\)](green)'
-renamed = '襁 '
-deleted = ' '
-
-# Shows kubernetes context and namespace
-[kubernetes]
-format = 'via [󱃾 $context\($namespace\)](bold purple) '
-disabled = false
-
-# ---
-
-[vagrant]
-disabled = true
-
-[docker_context]
-disabled = true
-
-[helm]
-disabled = true
+time_format = "%F %T"
+style = "#444444"
+format = '[$time]($style)'
 
 [python]
-symbol = '󰌠'
-python_binary = ['./venv/bin/python', 'python', 'python3', 'python2']
-format = '[//](#555555) [${symbol} ${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) '
+symbol = "py "
 
+[package]
+symbol = "package "
+style = "#777777"
 
-[nodejs]
-disabled = true
+[git_branch]
+symbol = "git "
 
-[ruby]
-disabled = true
+[aws]
+symbol = "aws "
 
 [terraform]
-disabled = true
+symbol = "tf "
+style = "bold #777777"
+
+[palettes.grey]
+grey = "#777777"
+none = "#777777"
+white = "#777777"
+rosewater = "#777777"
+flamingo = "#777777"
+pink = "#777777"
+mauve = "#777777"
+maroon = "#777777"
+peach = "#777777"
+sky = "#777777"
+sapphire = "#777777"
+blue = "#777777"
+lavender = "#777777"
+text = "#777777"
+subtext1 = "#777777"
+subtext0 = "#777777"
+overlay2 = "#777777"
+overlay1 = "#777777"
+overlay0 = "#777777"
+surface2 = "#777777"
+surface1 = "#777777"
+surface0 = "#777777"
+base = "#777777"
+mantle = "#777777"
+crust = "#777777"
+background = "#777777"
+current_line = "#777777"
+foreground = "#777777"
+comment = "#777777"
+cyan = "#777777"
+green = "#777777"
+orange = "#777777"
+purple = "#777777"
+red = "#777777"
+yellow = "#777777"
+
