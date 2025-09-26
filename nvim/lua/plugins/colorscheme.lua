@@ -18,6 +18,7 @@ return {
       },
     },
   },
+
   -- Tokyo Night
   {
     "folke/tokyonight.nvim",
@@ -32,10 +33,42 @@ return {
       },
     },
   },
+
+  -- Dracula
+  {
+    "Mofiqul/dracula.nvim",
+    lazy = true,
+    opts = {
+      transparent_bg = true,
+      italic_comment = true,
+      overrides = {},
+    },
+  },
+
+  -- Moonfly
+  {
+    "bluz71/vim-moonfly-colors",
+    name = "moonfly",
+    lazy = true,
+    config = function()
+      vim.g.moonflyTransparent = true
+      vim.g.moonflyWinSeparator = 2
+      vim.g.moonflyItalics = true
+      vim.g.moonflyUnderlineMatchParen = true
+    end,
+  },
+
+  -- Oxocarbon
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    lazy = false,
+  },
+
+  -- LazyVim colorscheme setting
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "oxocarbon",
     },
   },
 }
