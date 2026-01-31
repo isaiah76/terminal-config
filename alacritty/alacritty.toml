@@ -1,0 +1,72 @@
+[colors.bright]
+black = "0x555555"
+blue = "0x55b3ff"
+cyan = "0x66ffff"
+green = "0x99ff77"
+magenta = "0xc066ff"
+red = "0xff5599"
+white = "0xFFFFFF"
+yellow = "0xffff66"
+
+[colors.cursor]
+cursor = "0xFFFFFF"
+text = "0x000000"
+
+[colors.normal]
+black = "0x000000"
+blue = "0x0099ff"
+cyan = "0x00ffff"
+green = "0x33ff00"
+magenta = "0x9d00ff"
+red = "0xff007f"
+white = "0xFFFFFF"
+yellow = "0xffff00"
+
+[colors.primary]
+background = "0x000000"
+foreground = "0xFFFFFF"
+
+[colors.selection]
+background = "0xFFFFFF"
+text = "0x000000"
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 100000
+multiplier = 6
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[cursor]
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "Always"
+shape = "Beam"
+
+[font]
+size = 15.0
+
+[font.bold]
+family = "CaskaydiaCove Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "CaskaydiaCove Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "CaskaydiaCove Nerd Font Mono"
+style = "Regular"
+
+[window]
+decorations = "full"
+opacity = 0.5
+
+[window.padding]
+x = 25
+y = 25
