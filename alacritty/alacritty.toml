@@ -49,7 +49,7 @@ blinking = "Always"
 shape = "Beam"
 
 [font]
-size = 15.0
+size = 16.0
 
 [font.bold]
 family = "CaskaydiaCove Nerd Font Mono"
@@ -65,7 +65,7 @@ style = "Regular"
 
 [window]
 decorations = "full"
-opacity = 0.5
+opacity = 0.8
 
 [window.padding]
 x = 25
