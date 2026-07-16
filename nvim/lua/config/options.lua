@@ -8,3 +8,5 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 vim.opt.statuscolumn = "%=%{v:lnum == line('.') ? v:lnum . ' ' : v:lnum}%s"
 vim.g.neo_tree_hide_dotfiles = 0
+vim.g.lazyvim_php_lsp = "intelephense"
+vim.lsp.handlers["textDocument/documentHighlight"] = function() end

@@ -1,9 +1,9 @@
 palette = "grey"
-format = """$username$hostname$directory$fill[$all](grey)$time$line_break$character"""
+format = """$username$hostname$directory$all$time$line_break$character"""
 
 [character]
-success_symbol = "[@](bold green)"
-error_symbol = "[@](bold red)"
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
 
 [fill]
 symbol = '─'
@@ -20,6 +20,9 @@ format = '[$time]($style)'
 
 [python]
 symbol = "py "
+
+[java]
+disabled = true
 
 [package]
 symbol = "package "

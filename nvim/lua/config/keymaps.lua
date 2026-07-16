@@ -8,19 +8,13 @@ local map = vim.keymap.set
 -- MOVEMENT (NORMAL + VISUAL)
 -- =========================
 
--- Swap j and k (up/down)
-map("n", "j", "k", { noremap = true })
-map("n", "k", "j", { noremap = true })
-map("v", "j", "k", { noremap = true })
-map("v", "k", "j", { noremap = true })
-
 -- Arrow keys to match
-map("n", "<Up>", "k", { noremap = true })
-map("n", "<Down>", "j", { noremap = true })
+map("n", "<Up>", "j", { noremap = true })
+map("n", "<Down>", "k", { noremap = true })
 map("n", "<Left>", "h", { noremap = true })
 map("n", "<Right>", "l", { noremap = true })
-map("v", "<Up>", "k", { noremap = true })
-map("v", "<Down>", "j", { noremap = true })
+map("v", "<Up>", "j", { noremap = true })
+map("v", "<Down>", "k", { noremap = true })
 map("v", "<Left>", "h", { noremap = true })
 map("v", "<Right>", "l", { noremap = true })
 

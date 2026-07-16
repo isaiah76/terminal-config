@@ -24,7 +24,7 @@ return {
     "folke/tokyonight.nvim",
     lazy = true,
     opts = {
-      style = "storm", -- storm, night, day
+      style = "moon", -- storm, night, day
       transparent = true,
       terminal_colors = true,
       styles = {
@@ -68,7 +68,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "oxocarbon",
+      colorscheme = "industry",
     },
   },
 }
